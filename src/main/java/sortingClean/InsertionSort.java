@@ -1,4 +1,6 @@
-    public class InsertionSort implements SortingAlgorithm {
+package sortingClean;
+
+public class InsertionSort implements SortingAlgorithm {
     public void sort(Comparable[] array) {
         for (int i = 1; i<array.length; i++){
             Comparable key = array[i];
@@ -9,4 +11,5 @@
             array[j]=key;
         }
     }
+
 }

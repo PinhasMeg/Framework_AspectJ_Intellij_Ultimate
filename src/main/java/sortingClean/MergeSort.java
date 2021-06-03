@@ -1,8 +1,6 @@
-import javax.enterprise.inject.Default;
+package sortingClean;
 
-//@Default
 public class MergeSort implements SortingAlgorithm {
-    @Loggable
     public void sort(Comparable[] array){
         mergeSort(array, array.length);
     }

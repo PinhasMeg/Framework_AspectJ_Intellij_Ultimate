@@ -1,3 +1,5 @@
+package sortingClean;
+
 import javax.inject.Inject;
 import java.util.Random;
 
@@ -5,13 +7,13 @@ import java.util.Random;
 
 public class AlgorithmRunner {
     @Inject
-    @LowClass
+    @MainApp.Quadratic
     SortingAlgorithm<Integer> quadraticAlgorithm;
     @Inject
-    @HighClass
+    @MainApp.nlogn
     SortingAlgorithm<Integer> nlognAlgorithm;
     @Inject
-    @HighClass
+    @MainApp.NumberElements
     int numberOfElements;
 
     /**

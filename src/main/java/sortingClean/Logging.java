@@ -1,17 +1,19 @@
+package sortingClean;
+
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
-import java.util.Date;
-
 @Aspect
 public class Logging {
-    Date date=new Date();
     long startTime = 0;
-    @Pointcut("@annotation(Loggable)")
+
+    @Pointcut("execution(* *.*.sort*(..))")
     private void selectLoggable() {}
+
+
 
     @Before("selectLoggable()")
     public void beforeLoggable(JoinPoint jp) throws Throwable {
